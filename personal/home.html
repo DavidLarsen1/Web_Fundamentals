@@ -41,6 +41,58 @@
     </footer>
     
 
+
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01" alt="the img you clicked" src="none">
+        <div id="caption"></div>
+    </div>
+    
+    <script>
+    
+        var modal = document.getElementById("myModal");
+    
+    
+        var img1 = document.querySelector(".img1");
+        var img2 = document.querySelector(".img2");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+    
+    
+        function openModal(imgSrc, altText) {
+            modal.style.display = "block";
+            modalImg.src = imgSrc;
+            captionText.innerHTML = altText;
+        }
+    
+        function closeModal() {
+            modal.style.display = "none";
+        }
+    
+    
+        img1.onclick = function () {
+            openModal(this.src, this.alt);
+        };
+    
+    
+        img2.onclick = function () {
+            openModal(this.src, this.alt);
+        };
+    
+    
+        var span = document.getElementsByClassName("close")[0];
+    
+        span.onclick = function () {
+            closeModal();
+        };
+    </script>
+
+
+
+
+
+
     
 </body>
 </html>
